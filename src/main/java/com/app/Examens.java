@@ -16,4 +16,8 @@ public class Examens {
         this.dateEtHeureDeLExamen = dateEtHeureDeLExamen;
         this.coefficient = coefficient;
     }
+
+    public int getCoefficient(){
+        return coefficient;
+    }
 }

@@ -1,16 +1,17 @@
 package com.app;
 
-import java.time.Instant;
+import java.time.LocalDate;
+
 
 public class Personne {
     private int id;
     private String nom;
     private String prenom;
-    private Instant dateNaissance;
+    private LocalDate dateNaissance;
     private String email;
     private int telephone;
 
-    public Personne(int id, String nom, String prenom, Instant dateNaissance, String email, int telephone) {
+    public Personne(int id, String nom, String prenom, LocalDate dateNaissance, String email, int telephone) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
