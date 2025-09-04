@@ -31,9 +31,7 @@ class EtudiantsTest {
         PROG2 = new Cours(
                 1,"PROG2",7,enseignant1
         );
-        etudiant1 = new Etudiants(
-                1,"AMBININTSOA" ,"Ranto", "ranto@gmail.com", LocalDate.parse("2008-02-19"),03245623121,"K4",tuteur1, notes
-        );
+
         note1 = new Notes(
                 10,examen1,"Premimere note de PROG2",  Instant.parse("2025-06-01T08:00:00Z"),etudiant1
         );
@@ -42,12 +40,18 @@ class EtudiantsTest {
         );
         notes.add(note1);
         notes.add(note2);
+        etudiant1 = new Etudiants(
+                1,"AMBININTSOA" ,"Ranto", "ranto@gmail.com", LocalDate.parse("2008-02-19"),03245623121,"K4",tuteur1, notes
+        );
     }
 
     @Test
     void get_exam_grade_at_instant_t_OK(){
         var noteJuillet = etudiant1.getExamGrade(examen1, etudiant1,Instant.parse("2025-07-01T08:00:00Z"));
         assertEquals(noteJuillet,note1);
+
+        var noteOctobre = etudiant1.getExamGrade(examen2,etudiant1,Instant.parse("2025-08-01T08:00:00Z"));
+        assertEquals(noteOctobre,note2);
     }
 
     void get_cours_grade_at_instant_t_OK(){
