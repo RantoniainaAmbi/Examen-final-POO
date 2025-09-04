@@ -10,7 +10,7 @@ public class Notes {
     private Etudiants etudiant;
 
     public Notes(double valeur, Examens examen, String description, Instant dateChangement, Etudiants etudiant) {
-        this.valeur = valeur;
+        this.valeur = 0;
         this.examen = examen;
         this.description = description;
         this.dateChangement = dateChangement;
