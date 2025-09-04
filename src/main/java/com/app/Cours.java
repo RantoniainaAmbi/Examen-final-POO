@@ -12,4 +12,8 @@ public class Cours {
         this.credits = credits;
         this.enseignant = enseignant;
     }
+
+    public int getCredits(){
+        return credits;
+    }
 }

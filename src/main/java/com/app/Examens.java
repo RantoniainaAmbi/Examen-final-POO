@@ -17,6 +17,10 @@ public class Examens {
         this.coefficient = coefficient;
     }
 
+    public Cours getCours() {
+        return cours;
+    }
+
     public int getCoefficient(){
         return coefficient;
     }

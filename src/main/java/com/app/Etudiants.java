@@ -24,11 +24,12 @@ public class Etudiants extends Personne {
                 .map(Notes::getValeur)
                 .get();
     }
-//
-//    public double getCourseGrade(Cours cours, Etudiants etudiant, Instant t) {
-//        var noteFinale = 0;
-//        for (Notes note : notes) {
-//
-//        }
-//    }
+
+    public double getCourseGrade(Cours cours, Etudiants etudiant, Instant t) {
+        var noteFinale = 0;
+        for (Notes note : notes) {
+            noteFinale = (int) note.getValeur() * note.getExamen().getCoefficient() / note.getExamen().getCours().getCredits();
+        }
+        return noteFinale;
+    }
 }
